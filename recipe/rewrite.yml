@@ -1,0 +1,11 @@
+---
+type: specs.openrewrite.org/v1beta/recipe
+name: com.example.demo.UpgradeJavaAndSpringBoot
+displayName: Upgrade to the latest Java and Spring Boot
+description: >
+  Upgrades this project to the latest LTS release of Java and the latest
+  release of Spring Boot, letting OpenRewrite handle the build file,
+  source code, and configuration changes instead of doing it by hand.
+recipeList:
+  - org.openrewrite.java.migrate.UpgradeToJava25
+  - org.openrewrite.java.spring.boot4.UpgradeSpringBoot_4_0
