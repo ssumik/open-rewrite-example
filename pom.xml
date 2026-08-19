@@ -67,6 +67,7 @@
                     <configLocation>${maven.multiModuleProjectDirectory}/recipe/rewrite.yml</configLocation>
                     <activeRecipes>
                         <recipe>com.example.demo.UpgradeJavaAndSpringBoot</recipe>
+                        <recipe>com.example.demo.FinalizeVariables</recipe>
                     </activeRecipes>
                 </configuration>
                 <dependencies>
@@ -79,6 +80,11 @@
                         <groupId>org.openrewrite.recipe</groupId>
                         <artifactId>rewrite-spring</artifactId>
                         <version>6.37.0</version>
+                    </dependency>
+                    <dependency>
+                        <groupId>org.openrewrite.recipe</groupId>
+                        <artifactId>rewrite-static-analysis</artifactId>
+                        <version>2.41.0</version>
                     </dependency>
                 </dependencies>
             </plugin>

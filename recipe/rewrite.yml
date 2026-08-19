@@ -9,3 +9,14 @@ description: >
 recipeList:
   - org.openrewrite.java.migrate.UpgradeToJava25
   - org.openrewrite.java.spring.boot4.UpgradeSpringBoot_4_0
+---
+type: specs.openrewrite.org/v1beta/recipe
+name: com.example.demo.FinalizeVariables
+displayName: Mark never-reassigned locals and parameters as final
+description: >
+  Adds the `final` modifier to local variables and method/constructor
+  parameters that are never reassigned, making immutability explicit
+  and catching accidental reassignment at compile time.
+recipeList:
+  - org.openrewrite.staticanalysis.FinalizeLocalVariables
+  - org.openrewrite.staticanalysis.FinalizeMethodArguments
